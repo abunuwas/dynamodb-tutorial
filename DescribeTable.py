@@ -15,13 +15,6 @@ class DigitsEncoder(json.JSONEncoder):
 			return str(o)
 		return super(DecimalEncoder, self).default(o)
 
-dynamodb = boto3.resource('dynamodb', region_name='eu-west-1',
-	endpoint_url='http://localhost:8000')
-
-table = dynamodb.Table('Movies')
-print(table.global_secondary_indexes)
-
-#response = table.describe_table()
 
 client = boto3.client('dynamodb', region_name='eu-west=1', endpoint_url='http://localhost:8000')
 

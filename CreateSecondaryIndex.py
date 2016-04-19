@@ -4,8 +4,6 @@ import json
 dynamodb = boto3.resource('dynamodb', region_name='eu-west-1', 
 	endpoint_url='http://localhost:8000')
 
-table = dynamodb.Table('Movies')
-
 client = boto3.client('dynamodb', region_name='eu-west-1', endpoint_url='http://localhost:8000')
 
 attribute_definitions = [
